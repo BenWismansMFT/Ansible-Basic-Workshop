@@ -23,14 +23,16 @@ Voor deze workshop heb je nodig:
   -rw-r--r-- 1 pi pi  884 Feb 14 22:07 cisco.yml
   ```
   
-  ## Installatie Ansible
-- Deze acties moeten als root, of via een user die via sudo rechten heeft uitgevoerd worden:
+  ## Installatie Ansible op 1e VM
+- Deze acties moeten als root, of via een user die via sudo rechten heeft uitgevoerd worden (acties zijn gebaseerd op CentOS/Redhat, voor Oracle Linux 7 zie iets verder beneden):
 ```
 user@vm:~ $ sudo yum install epel-release
 user@vm:~ $ sudo yum install ansible
 user@vm:~ $ ssh-keygen (nodig voor latere opdracht, bij voorkeur niet als root user uitvoeren)
 
-
+# Installatie op Oracle Linux 7
+user@vm:~ $ sudo yum-config-manager --enable ol7_developer_EPEL
+user@vm:~ $ sudo yum install ansible-python3
 ```
 
 
